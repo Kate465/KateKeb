@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🍰 Baking-My hobby</title>
+
+    <style>
+      body {
+        background: #9896f1;
+      }
+      h1 {
+        text-align: center;
+      }
+      h2 {
+        text-align: center;
+      }
+      img {
+        max-width: 100%;
+        border-radius: 6px;
+      }
+      p {
+        line-height: 1.5;
+        font-size: 18px;
+      }
+
+      .container {
+        max-width: 600px;
+        background: white;
+        padding: 10px 20px;
+        border-radius: 6px;
+        margin: 20px auto;
+      }
+      button {
+        display: block;
+        margin: 0 auto;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #9896f1;
+        border-radius: 15px;
+        background: white;
+        transition: all 200ms ease-in-out;
+      }
+      button:hover {
+        cursor: pointer;
+        background: #9896f1;
+      }
+
+      footer {
+        text-align: center;
+        margin: 20px 0;
+        font-size: 14x;
+      }
+      .theme-button {
+        background: black;
+        color: white;
+        font-size: 12px;
+        padding: 9px;
+      }
+      .theme-button:hover {
+        color: black;
+        background: white;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 15px;
+        margin: 15px 0px;
+      }
+      .grid img {
+        width: 100%;
+      }
+      .grid img:hover {
+        transform: scale(1.1);
+      }
+      .intro-baking-picture {
+        border-radius: 6px;
+        transition: all 2ooms ease-in-out;
+        margin: 0 auto;
+        display: block;
+      }
+      .intro-baking-picture:hover {
+        transform: scale(1.1);
+        filter: contrast(70%);
+      }
+      .dark .container {
+        background: rgba(255, 255, 255, 0.1);
+        color: white;
+      }
+      .dark {
+        background: radial-gradient(
+          circle at 10% 20%,
+          rgb(0, 0, 0) 0%,
+          rgb(64, 64, 64) 90.2%
+        );
+      }
+      .dark a {
+        color: blueviolet;
+      }
+      a {
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <button class="theme-button">Change theme</button>
+
+  <body>
+    <div class="container">
+      <h1>Baking</h1>
+      <h2>My Favourite Hobby</h2>
+
+      <a href="https://en.wikipedia.org/wiki/Baking">
+        <img
+          src="https://assets.epicurious.com/photos/62b9e092ba4911ad9d7f93ac/16:9/w_6139,h_3453,c_limit/ChiffonCake_HERO_062322_36161.jpg"
+          width="300"
+          alt="cake"
+          class="intro-baking-picture"
+        />
+      </a>
+      <div class="grid">
+        <img
+          src="https://www.wikihow.com/images/thumb/7/79/Bake-a-Cake-Step-32-Version-2.jpg/550px-nowatermark-Bake-a-Cake-Step-32-Version-2.jpg"
+          width="300"
+          alt="making dough"
+        />
+
+        <img
+          src="https://iscreamforbuttercream.com/wp-content/uploads/2019/06/how-to-tell-when-cake-is-done-screenshots-watermarked-2-of-3-1.jpg"
+          width="300"
+          alt="oven"
+        />
+        <img
+          src="https://www.howcast.com/.image/t_share/MTU5NzA0NjU0NDk0MTgwMzcy/j-3-cake-border-piping-tips-promo-image.jpg"
+          width="300"
+          alt="piping cake"
+        />
+      </div>
+      <p>
+        Baking is a method of preparing food that uses dry heat, typically in an
+        oven, but can also be done in hot ashes, or on hot stones. The most
+        common baked item is bread, but many other types of foods can be
+        baked.In addition to bread, baking is used to prepare cakes, pastries,
+        pies, tarts, quiches, cookies, scones, crackers, pretzels, and more.
+      </p>
+      <a href="https://en.wikipedia.org/wiki/Baking">
+        📖Read more on wikipedia
+      </a>
+      <br />
+      <br />
+      <button>👉Sign-Up For Recipes</button>
+
+      <footer><em>This page was built by Keamogetse Keborate</em></footer>
+      <script>
+        function changeTheme() {
+          let body = document.querySelector("body");
+          if (body.classList.contains("dark")) {
+            body.classList.remove("dark");
+          } else {
+            body.classList.add("dark");
+          }
+        }
+        let themeButton = document.querySelector(".theme-button");
+        themeButton.addEventListener("click", changeTheme);
+      </script>
+    </div>
+  </body>
+</html>
